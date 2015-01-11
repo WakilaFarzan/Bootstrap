@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<button type="button" id="loading-example-btn" data-loading-text="Loading..." class="btn btn-primary">
+    Loading state
+</button>
+<script>
+    $('#loading-example-btn').click(function () {
+        var btn = $(this)
+        btn.button('loading')
+        $.ajax(...).always(function () {
+            btn.button('reset')
+        });
+    });
+</script>
+</br>
+</br>
+<div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-primary">
+        <input type="checkbox"> Option 1
+    </label>
+    <label class="btn btn-primary">
+        <input type="checkbox"> Option 2
+    </label>
+    <label class="btn btn-primary">
+        <input type="checkbox"> Option 3
+    </label>
+</div>
+</br>
+</br>
+<div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-primary">
+        <input type="radio" name="options" id="option1"> Option 1
+    </label>
+    <label class="btn btn-primary">
+        <input type="radio" name="options" id="option2"> Option 2
+    </label>
+    <label class="btn btn-primary">
+        <input type="radio" name="options" id="option3"> Option 3
+    </label>
+</div>
+
+
+
+</body>
+</html>
