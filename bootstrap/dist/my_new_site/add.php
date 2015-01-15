@@ -1,7 +1,7 @@
 <?php
 $link = mysqli_connect("localhost",
     "root",
-    "allah@03",
+    "lict@2",
     "newsite");
 
 $query="INSERT INTO `newsite`.`signup` (

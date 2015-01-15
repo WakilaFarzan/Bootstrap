@@ -33,7 +33,7 @@ $password = $_POST['password'];
 
 //exit;
 
-$link = mysqli_connect("localhost", "root", "allah@03", "newsite");
+$link = mysqli_connect("localhost", "root", "lict@2", "newsite");
 
 $query = "SELECT * FROM signup WHERE `name` = '$name' AND `password` = '$password'";
 $result = mysqli_query($link, $query);

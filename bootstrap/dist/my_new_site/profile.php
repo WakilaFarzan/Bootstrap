@@ -6,7 +6,7 @@ $id = $_SESSION['id'];
 
 $link = mysqli_connect("localhost",
     "root",
-    "allah@03",
+    "lict@2",
     "newsite");
 
 $query = "select * from signup WHERE id = $id";
@@ -68,7 +68,7 @@ $row = mysqli_fetch_assoc($result);
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                            <li class="active"><a href="dashboard.php">Home <span class="sr-only">(current)</span></a></li>
                             <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="logout.php">Logout</a></li>
                             <li class="dropdown">
