@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="well well-lg">
-                <form action="" method="post" class="form-horizontal">
+                <form action="calculate.php" method="post" class="form-horizontal">
                     <p class="text-center"><legend>Calculator</legend></p>
                     <div class="form-group">
                         <label  class="col-sm-2 control-label">Enter Number1</label>
@@ -34,7 +34,7 @@
                                 <input type="radio" name="calculate" id="inlineRadio3" value="subtract"> Subtract
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="calculate" id="inlineRadio3" value="devide"> Devide
+                                <input type="radio" name="calculate" id="inlineRadio3" value="divide"> Devide
                             </label>
                             <label class="radio-inline">
                                 <input type="radio" name="calculate" id="inlineRadio3" value="multiply"> Multiply
@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default">Calculate</button>
+                            <button type="submit" value="calculate" class="btn btn-default">Calculate</button>
                         </div>
                     </div>
                 </form>
@@ -57,3 +57,23 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+<?php
+
+    $value=calResult($number1, $number2, $calculate);
+    if(isset($value)) {
+        $msg = $_SESSION['msg'];
+        echo $msg;
+        echo "<br>";
+echo $value;
+}
+
+//echo calResult($number1, $number2, $calculate);
+session_unset();
+//session_destroy();
+
+?>
+
+
+
