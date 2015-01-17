@@ -1,81 +1,8 @@
-<?php
-session_start();
+
+<?php session_start();
 
 $_SESSION['msg']="Successfully calculated the operation";
 $msg = $_SESSION['msg'];
-
-$number1=$_POST['number1'];
-$number2=$_POST['number2'];
-$calculate=$_POST['calculate'];
-
-
-$value=calResult($number1, $number2, $calculate);
-//echo calResult($number1,$number2,$calculate);
-
-function calResult($number1,$number2,$calculate){
-
-
-    if($calculate=="add")
-    {
-        $compute=addCalculator($number1,$number2);
-    }
-    if($calculate=="subtract")
-    {
-        $compute=subtractCalculator($number1,$number2);
-    }
-    if($calculate=="multiply")
-    {
-        $compute=multiplyCalculator($number1,$number2);
-    }
-    if($calculate=="divide")
-    {
-        $compute=divideCalculator($number1,$number2);
-    }
-
-    return $compute;
-}
-
-
-function addCalculator($number1,$number2){
-
-    $result=$number1+$number2;
-    return $result;
-}
-
-function subtractCalculator($number1,$number2){
-
-    if($number1>$number2)
-    {
-        $result=$number1-$number2;
-        return $result;
-    }
-    else
-    {
-        return "Number1 should be larger than Number2";
-    }
-}
-
-function multiplyCalculator($number1,$number2){
-
-    $result= $number1 * $number2;
-    return $result;
-
-}
-
-function divideCalculator($number1,$number2){
-
-    if($number2==0)
-    {
-        return "can't divide";
-    }
-    else
-    {
-        $result= $number1/$number2;
-        return $result;
-    }
-}
-
-
 ?>
 
 
@@ -170,10 +97,4 @@ function divideCalculator($number1,$number2){
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
 
